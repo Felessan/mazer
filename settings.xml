@@ -1,0 +1,51 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                      https://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+<mirrors>
+    <mirror>
+        <id>mirror_of_central</id>
+        <name>Mirror-Central</name>
+        <url>http://central.maven.org/maven2/</url>
+        <mirrorOf>central</mirrorOf>
+    </mirror>
+</mirrors>
+
+    <profiles>
+        <profile>
+            <id>default</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <repositories>
+                <repository>
+                    <id>mavenNatives</id>
+                    <name>Maven Natives Repository</name>
+                    <url>http://mavennatives.googlecode.com/svn/repo</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+
+                <repository>
+                    <id>central-2</id>
+                    <name>central.maven.org</name>
+                    <url>http://central.maven.org/maven2/</url>
+                </repository>
+
+                <repository>
+                    <id>oss.sonatype.org</id>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>swt-repo</id>
+                    <url>http://maven-eclipse.github.io/maven</url>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+</settings>
